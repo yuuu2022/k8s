@@ -15,22 +15,25 @@ However, Spring Cloud requires the use of Java for development, which limits the
 There are two points in kubernetes platform as below:
 control plane (role:headcounter)
   kube-apiserver (role : operation department)(commuicate with woker node)
-  kube-scheduler (create node ,cpu resource , memory and check the node 's status)
+  kube-scheduler (role : VP ) (create node ,cpu resource , memory and check the node 's status)
   kube-controller-manager (role:CEO) (run cluster including node controller , job   controller , 
                           endpoints controller , service account &　Token Controllers)
   etcd (role:secretary) (a key table which is using to save the configuration and cluster status .
   
 woker node
-  kubelet (access the node and set the node)
-  kube-proxy (network agent)
+  kubelet (branch manager) (access the node and set the node)
+  kube-proxy (connector) (network agent)
   container runtime
     pod
     containers
-    
-# K3S 
-Before try to set a K8S platform , this project try to use K3S as the attempt first .
 
 # minikube
+  must run below cmd to use containerd because minikube is installing kubernetes V1.25.0 or later version that give up docker and change to containerd.
+  minikube start --container-runtime=containerd
+  # cmd
+  use kubectl cmd to check the minikube 
+# K3S 
+Before try to set a K8S platform , this project try to use K3S as the attempt first .
 
 
 
