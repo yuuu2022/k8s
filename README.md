@@ -12,20 +12,20 @@ However, Spring Cloud requires the use of Java for development, which limits the
 
 # K8s main points
 
-There are five points in kubernetes platform as below:
-	- control plane (role:headcounter)
-  - kube-apiserver (role : operation department)(commuicate with woker node)
-  - kube-scheduler (role : VP ) (create node ,cpu resource , memory and check the node 's status)
-  - kube-controller-manager (role:CEO) (run cluster including node controller , job   controller , 
+There are two points in kubernetes platform as below:
+   - control plane
+     1. kube-apiserver (role : operation department)(commuicate with woker node)
+     2. kube-scheduler (role : VP ) (create node ,cpu resource , memory and check the node 's status)
+     3. kube-controller-manager (role:CEO) (run cluster including node controller , job   controller , 
                           endpoints controller , service account &　Token Controllers)
-  - etcd (role:secretary) (a key table which is using to save the configuration and cluster status .)
+     4. etcd (role:secretary) (a key table which is using to save the configuration and cluster status .)
   
-woker node
-  - kubelet (branch manager) (access the node and set the node)
-  - kube-proxy (connector) (network agent)
-  - container runtime
-    - pod
-    - containers
+   - woker node
+     1. kubelet (branch manager) (access the node and set the node)
+     2. kube-proxy (connector) (network agent)
+     3. container runtime
+        - pod
+        - containers
 
 # minikube
   - must run below cmd to use containerd because minikube is installing kubernetes V1.25.0 or later version that give up docker and change to containerd.
