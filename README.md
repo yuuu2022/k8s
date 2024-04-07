@@ -28,10 +28,9 @@ There are two points in kubernetes platform as below:
         - containers
 
 # minikube
-  1. must run below cmd to use containerd because minikube is installing kubernetes V1.25.0 or later version that give up docker and change to containerd.
-  2. minikube start --container-runtime=containerd or  minikube start --container-runtime=containerd --no-vtx-check
-  - cmd
-  1. use kubectl cmd to check the minikube 
+  - must run below cmd to use containerd because minikube is installing kubernetes V1.25.0 or later version that give up docker and change to containerd. (minikube start --container-runtime=containerd or  minikube start --container- 
+    runtime=containerd --no-vtx-check)
+  - can use kubectl to connect apiserver that we can control all nodes.
 # K3S 
 Before try to set a K8S platform , this project try to use K3S as the attempt first .
 
